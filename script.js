@@ -70,3 +70,19 @@ const returnAToBOnlyEvens = (a, b) => {
 };
 
 // console.log(returnAToBOnlyEvens(1, 10));
+
+// masala 9
+const returnLetterCapitalize = (text) => text.charAt(0).toUpperCase() + text;
+
+// console.log(returnLetterCapitalize("Kamola"));
+
+// masala 10
+const manyReturnText = (text, count) => {
+    let newStr = text;
+    for (let i = 0; i < count; i++) {
+        newStr += ` ${text}`;
+    }
+    return newStr;
+};
+
+// console.log(manyReturnText("salom", 5));
