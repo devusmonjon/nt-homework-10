@@ -7,3 +7,9 @@ const returnAllNegatives = (numbers) => numbers.filter((number) => number > 0);
 const reverseString = (str) => str.split("").reverse().join("");
 
 // console.log(reverseString("salom"));
+
+// 3-masala
+const reverseNumber = (number) =>
+    number.toString().split("").reverse().join("");
+
+// console.log(reverseNumber(12345));
