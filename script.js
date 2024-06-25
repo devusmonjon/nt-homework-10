@@ -86,3 +86,6 @@ const manyReturnText = (text, count) => {
 };
 
 // console.log(manyReturnText("salom", 5));
+
+// masala 11
+const reverseArray = (arr) => arr.reverse();
