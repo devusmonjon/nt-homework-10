@@ -96,3 +96,62 @@ const reverseArray = (arr) => arr.reverse();
 const ascendingSort = (arr) => arr.sort((a, b) => a - b);
 
 // console.log(ascendingSort([2,1,13,4]));
+
+// qo'shimcha masalalar
+// descendingSort
+const descendingSort = (arr) => arr.sort((a, b) => b - a);
+
+// console.log(descendingSort([2,1,13,4]));
+// funksyaga abject va key beriladi object ichida key topilsa o'sha key'dagi qiymat qaytariladi, agar object ichida key topilmasa yoki key'da falcy qiymat bo'lsa false o'zi qaytariladi
+const findKeyFromObject = (obj, key) => (obj[key] ? obj[key] : false);
+
+// console.log(findKeyFromObject({ name: "John", age: 30 }, "name"));
+
+// console.log(findKeyFromObject({ name: "John", age: 30 }, "address"));
+
+// console.log(findKeyFromObject({ name: "John", age: undefined }, "age"));
+
+/**
+ *   *  *       * * *    *       *         **       *      *  *  *            **       * * * * *   * * * * *
+ *   *    *    *     *   * *   * *        *  *      * *    *  *    *         *  *      *        *      *
+ *   *     *  *       *  *   *   *       *    *     *  *   *  *     *       *    *     *        *      *
+ *   *     *  *       *  *       *      * *  * *    *   *  *  *     *      * *  * *    * * * * *       *
+ *   *    *    *     *   *       *     *        *   *    * *  *    *      *        *   *               *
+ *   *  *       * * *    *       *    *          *  *      *  *  *       *          *  *           * * * * *
+ **/
+
+const list = document.querySelector("tbody");
+
+const URL = "https://api.mocki.io/v2/zxgsvd3l/users";
+
+const fetchUsers = async () => {
+    const response = await fetch(URL, {
+        method: "POST",
+    });
+    const data = await response.json();
+    const users = data.result.data;
+    users.forEach((user, id) => {
+        list.innerHTML += `<tr data-id="${id}">
+            <td>${user.firstName}</td>
+            <td>${user.lastName}</td>
+            <td>${user.jobTitle}</td>
+            <td>${user.prefix}</td>
+            <td>${user.suffix}</td>
+            <td>${user.jobArea}</td>
+            <td>${user.phone}</td>
+            <td>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </button>
+                    </td>
+        </tr>`;
+    });
+    const deleteBtns = document.querySelectorAll(".btn-danger");
+
+    deleteBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.target.parentElement.parentElement.remove();
+        });
+    });
+};
+fetchUsers();
