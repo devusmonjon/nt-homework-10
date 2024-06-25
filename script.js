@@ -17,4 +17,27 @@ const reverseNumber = (number) =>
 // 4-masala
 const falcyToTrust = (arr) => arr.filter((bool) => bool === false);
 
-console.log(falcyToTrust([true, false, false, true]));
+// console.log(falcyToTrust([true, false, false, true]));
+
+// 5-masala
+{
+    // 5. 1-usul
+    const returnOnlyEvens = (numbers) =>
+        numbers.reduce(
+            (num, number) => (number % 2 === 0 ? num + number : num),
+            0,
+        );
+    console.log(returnOnlyEvens([1, 2, 3, 4, 5]));
+}
+
+{
+    // 5. 2-usul
+    const returnOnlyEvens = (numbers) => {
+        let num = 0;
+        numbers.forEach((number) => {
+            number % 2 === 0 && (num += number);
+        });
+        return num;
+    };
+    console.log(returnOnlyEvens([1, 2, 3, 4, 5]));
+}
