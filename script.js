@@ -47,7 +47,7 @@ const returnNumsGrades = (numbers) => numbers.map((number) => number ** 2);
 
 // console.log(returnNumsGrades([5, 2, 3]));
 
-// masala 7
+// 7-masala
 const returnToN = (n) => {
     let nums = [];
     for (let i = 1; i <= n; i++) {
@@ -58,7 +58,7 @@ const returnToN = (n) => {
 
 // console.log(returnToN(5));
 
-// masala 8
+// 8-masala
 const returnAToBOnlyEvens = (a, b) => {
     let nums = [];
     for (let i = a; i <= b; i++) {
@@ -71,12 +71,12 @@ const returnAToBOnlyEvens = (a, b) => {
 
 // console.log(returnAToBOnlyEvens(1, 10));
 
-// masala 9
+// 9-masala
 const returnLetterCapitalize = (text) => text.charAt(0).toUpperCase() + text;
 
 // console.log(returnLetterCapitalize("Kamola"));
 
-// masala 10
+// 10-masala
 const manyReturnText = (text, count) => {
     let newStr = text;
     for (let i = 0; i < count; i++) {
@@ -87,5 +87,12 @@ const manyReturnText = (text, count) => {
 
 // console.log(manyReturnText("salom", 5));
 
-// masala 11
+// 11-masala
 const reverseArray = (arr) => arr.reverse();
+
+// console.log(reverseArray([1, 2, 3]));
+
+// 12-masala
+const ascendingSort = (arr) => arr.sort((a, b) => a - b);
+
+// console.log(ascendingSort([2,1,13,4]));
