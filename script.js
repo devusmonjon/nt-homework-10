@@ -13,3 +13,8 @@ const reverseNumber = (number) =>
     number.toString().split("").reverse().join("");
 
 // console.log(reverseNumber(12345));
+
+// 4-masala
+const falcyToTrust = (arr) => arr.filter((bool) => bool === false);
+
+console.log(falcyToTrust([true, false, false, true]));
