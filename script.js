@@ -131,7 +131,7 @@ const fetchUsers = async () => {
     const data = await response.json();
     const users = data.result.data;
     users.forEach((user, id) => {
-        list.innerHTML += `<tr data-id="${id}">
+        list.innerHTML += `<tr data-id="${id}" class="animation-show">
             <td>${user.firstName}</td>
             <td>${user.lastName}</td>
             <td>${user.jobTitle}</td>
@@ -140,17 +140,25 @@ const fetchUsers = async () => {
             <td>${user.jobArea}</td>
             <td>${user.phone}</td>
             <td>
-                        <button class="btn btn-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i> Delete
+                        <button class="btn btn-danger btn-sm"> Delete
                         </button>
                     </td>
         </tr>`;
     });
+
     const deleteBtns = document.querySelectorAll(".btn-danger");
 
     deleteBtns.forEach((btn) => {
         btn.addEventListener("click", (e) => {
-            e.target.parentElement.parentElement.remove();
+            e.target.parentElement.parentElement.classList.remove(
+                "animation-show",
+            );
+            e.target.parentElement.parentElement.classList.add(
+                "animation-hide",
+            );
+            setTimeout(() => {
+                e.target.parentElement.parentElement.remove();
+            }, 500);
         });
     });
 };

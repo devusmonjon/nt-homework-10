@@ -14,6 +14,11 @@
             overflow-x: auto;
         }
 
+        tbody tr {
+            transition: .5s all ease;
+            opacity: 0;
+        }
+
         @media (max-width: 768px) {
             .table thead {
                 display: none;
@@ -22,6 +27,7 @@
             .table tr {
                 display: block;
                 margin-bottom: 1rem;
+
             }
 
             .table td {
@@ -39,6 +45,34 @@
                 padding-left: 15px;
                 font-weight: bold;
                 text-align: left;
+            }
+        }
+
+        .animation-hide {
+            animation: animation-hide 0.5s forwards;
+        }
+
+        .animation-show {
+            animation: animation-show 0.5s forwards;
+        }
+
+        @keyframes animation-hide {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes animation-show {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
             }
         }
     </style>
