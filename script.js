@@ -27,7 +27,7 @@ const falcyToTrust = (arr) => arr.filter((bool) => bool === false);
             (num, number) => (number % 2 === 0 ? num + number : num),
             0,
         );
-    console.log(returnOnlyEvens([1, 2, 3, 4, 5]));
+    // console.log(returnOnlyEvens([1, 2, 3, 4, 5]));
 }
 
 {
@@ -39,5 +39,10 @@ const falcyToTrust = (arr) => arr.filter((bool) => bool === false);
         });
         return num;
     };
-    console.log(returnOnlyEvens([1, 2, 3, 4, 5]));
+    // console.log(returnOnlyEvens([1, 2, 3, 4, 5]));
 }
+
+// 6-masala
+const returnNumsGrades = (numbers) => numbers.map((number) => number ** 2);
+
+// console.log(returnNumsGrades([5, 2, 3]));
