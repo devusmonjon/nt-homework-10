@@ -46,3 +46,14 @@ const falcyToTrust = (arr) => arr.filter((bool) => bool === false);
 const returnNumsGrades = (numbers) => numbers.map((number) => number ** 2);
 
 // console.log(returnNumsGrades([5, 2, 3]));
+
+// masala 7
+const returnToN = (n) => {
+    let nums = [];
+    for (let i = 1; i <= n; i++) {
+        nums.push(i);
+    }
+    return nums;
+};
+
+// console.log(returnToN(5));
