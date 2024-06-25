@@ -57,3 +57,16 @@ const returnToN = (n) => {
 };
 
 // console.log(returnToN(5));
+
+// masala 8
+const returnAToBOnlyEvens = (a, b) => {
+    let nums = [];
+    for (let i = a; i <= b; i++) {
+        if (i % 2 === 0) {
+            nums.push(i);
+        }
+    }
+    return nums;
+};
+
+// console.log(returnAToBOnlyEvens(1, 10));
